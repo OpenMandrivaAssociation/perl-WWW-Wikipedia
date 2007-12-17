@@ -18,7 +18,6 @@ BuildRequires:  perl-libwww-perl
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(Text::Autoformat)
 Buildarch:      noarch
-Buildroot:      %{_tmppath}/%{name}-%{version}
 
 %description
 WWW::Wikipedia provides an automated interface to the Wikipedia 
