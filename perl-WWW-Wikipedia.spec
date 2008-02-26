@@ -1,6 +1,6 @@
 %define module  WWW-Wikipedia
 %define name	perl-%{module}
-%define version 1.93
+%define version 1.94
 %define release %mkrel 1
 
 Name:		%{name}
