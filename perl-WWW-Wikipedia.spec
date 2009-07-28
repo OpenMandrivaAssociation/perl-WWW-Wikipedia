@@ -1,24 +1,24 @@
-%define module  WWW-Wikipedia
-%define name	perl-%{module}
-%define version 1.95
-%define release %mkrel 1
+%define upstream_name    WWW-Wikipedia
+%define upstream_version 1.95
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:    Automated interface to the Wikipedia
 License:    Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/WWW/%{module}-%{version}.tar.bz2
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
 BuildRequires:  perl-libwww-perl
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(Text::Autoformat)
-Buildarch:      noarch
-Buildroot:      %{_tmppath}/%{name}-%{version}
+Buildarch: noarch
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 WWW::Wikipedia provides an automated interface to the Wikipedia 
@@ -28,7 +28,7 @@ resulting entry. It also gives you access to related topics which are also
 available via the Wikipedia for that entry.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -48,5 +48,3 @@ rm -rf %{buildroot}
 %_bindir/*
 %_mandir/*/*
 %perl_vendorlib/WWW
-
-
