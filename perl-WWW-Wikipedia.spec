@@ -1,5 +1,5 @@
 %define upstream_name    WWW-Wikipedia
-%define upstream_version 1.96
+%define upstream_version 1.97
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
