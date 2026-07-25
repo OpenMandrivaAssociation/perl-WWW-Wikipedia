@@ -1,15 +1,15 @@
 %define upstream_name    WWW-Wikipedia
-%define upstream_version 2.00 
+%define upstream_version 2.05
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Automated interface to the Wikipedia
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/edsu/www-wikipedia
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/WWW-Wikipedia-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
