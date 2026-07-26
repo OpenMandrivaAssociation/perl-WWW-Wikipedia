@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Wikipedia
-%define upstream_version 2.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.05
+Release:	2
 
 Summary:	Automated interface to the Wikipedia
 License:	Artistic
 Group:		Development/Perl
 Url:		https://github.com/edsu/www-wikipedia
-Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/WWW-Wikipedia-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/WWW-Wikipedia-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ resulting entry. It also gives you access to related topics which are also
 available via the Wikipedia for that entry.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -66,9 +64,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.950.0-1mdv2010.0
 + Revision: 401882
-- rebuild using %%perl_convert_version
-
-* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.95-1mdv2010.0
+- rebuild using %2.05 Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.95-1mdv2010.0
 + Revision: 370248
 - update to new version 1.95
 
